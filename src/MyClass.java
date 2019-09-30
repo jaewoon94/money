@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class MyClass {
 	public MyClass(){
@@ -15,7 +16,23 @@ public class MyClass {
 	}
 	public int coin(int money) {
 		money += 1000;
-		System.out.println("ÇöÀç" +money+ "¿ø ÀÖ½ººó´Ù.");
+		System.out.println("´ç½ÅÀÇ µ·Àº?" +money);
+		return money;
+	} 
+	public int coinRandom(int money) {
+		Random rd = new Random();
+//		System.out.println("·£´ı ¼ıÀÚ´Â? " +rd.nextInt(3));
+		int num = rd.nextInt(3);
+		if(num == 0) {
+			money += 1000;
+    }else if(num == 1) { 
+			money += 2000;
+    }else if(num == 2) { 
+			money += 3000;
+    }else {
+			System.out.println("²Î");
+	}
+		
 		return money;
 	}
 
